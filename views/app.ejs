@@ -5,52 +5,20 @@
         <div class="container">
             <h1>Home</h1>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam odio possimus maxime, rem nesciunt
-                voluptas, expedita impedit temporibus omnis, quasi magni qui asperiores voluptatem. Repellendus debitis
-                aliquam quod voluptas doloremque adipisci omnis ipsa officiis odit voluptatem maiores fuga tempora, iure
-                repudiandae ab labore possimus itaque blanditiis laboriosam. Debitis aliquid porro impedit eveniet, quae
-                eos
-                voluptatibus cupiditate exercitationem provident rem quos suscipit, necessitatibus odit. Laudantium ad
-                eum
-                tempore. Delectus necessitatibus alias porro doloribus, molestiae magnam velit, nemo non impedit ad
-                soluta!
-                Placeat cumque nihil, aut aspernatur officia laboriosam! Recusandae beatae doloribus dolore nobis
-                sapiente
-                unde eius magnam culpa nostrum nesciunt ipsa numquam iure fugit doloremque, quos saepe voluptas
-                cupiditate
-                deleniti libero laboriosam deserunt? Veniam at atque quibusdam tempora iure placeat praesentium rerum,
-                asperiores non officia minima blanditiis fuga sint, eligendi nisi harum qui dolorem aliquam autem
-                expedita
-                itaque
+                <%= para1 %>
             </p>
             <form action="/main" method="post">
                 <button class="read">Read More</button>
             </form>
-            <!-- jsjs -->
-
-        </div>
-        <div class="container">
-            <h2>Day 1</h2>
-            <p>
-                <%= para1 %>
-            </p>
-            <form action="/more" method="post">
-                <button class="read" name="read" value="day1">Read More</button>
-            </form>
-
-        </div>
-        <div class="container">
-            <h2>Day 2</h2>
-            <p>
-                <%= para2 %>
-
-            </p>
-            <form action="/more" method="post">
-                <button class="read" name="read" value="day2">Read More</button>
-            </form>
-
+            <%posts.forEach((post)=> {%>
+                <p>
+                    <%=post%>
+                </p>
+                <form action="/main" method="post">
+                    <button class="read">Read More</button>
+                </form>
+                <%});%>
         </div>
     </main>
-
 
     <%- include('partials/footer'); -%>
